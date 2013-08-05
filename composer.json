@@ -1,0 +1,24 @@
+{
+    "name": "lx/socket",
+    "description": "This libary provides a OOP way of working with sockets.",
+    "license": "CC-BY-SA-3.0",
+    "url": "https://github.com/Lexance",
+    "authors": [
+        {
+            "name": "Victor J. C. Geyer",
+            "email": "victorgeyer@ciscaja.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "lx\\Socket": "" }
+    },
+    "require": {
+        "lx/http": "dev-master"
+    },
+    "target-dir": "lx/Socket",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
