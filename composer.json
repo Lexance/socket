@@ -1,6 +1,6 @@
 {
     "name": "lx/socket",
-    "description": "This libary provides a OOP way of working with sockets.",
+    "description": "This library provides a OOP way of working with sockets.",
     "license": "CC-BY-SA-3.0",
     "url": "https://github.com/Lexance",
     "authors": [
