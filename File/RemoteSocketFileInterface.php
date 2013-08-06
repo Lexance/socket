@@ -8,18 +8,18 @@
 
 namespace lx\Socket\File;
 
-use lx\Socket\Connection\SocketConnectionInterface;
+use lx\Socket\Connection\RemoteSocketConnectionInterface;
 
 interface RemoteSocketFileInterface
 {
     /**
-     * @param SocketConnectionInterface|null $connection
+     * @param RemoteSocketConnectionInterface|null $connection
      * @return $this
      */
-    public function setConnection(SocketConnectionInterface $connection = null);
+    public function setConnection(RemoteSocketConnectionInterface $connection = null);
 
     /**
-     * @return SocketConnectionInterface|null
+     * @return RemoteSocketConnectionInterface|null
      */
     public function getConnection();
 

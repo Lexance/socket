@@ -8,19 +8,19 @@
 
 namespace lx\Socket\File;
 
-use lx\Socket\Connection\SocketConnectionInterface;
+use lx\Socket\Connection\RemoteSocketConnectionInterface;
 
 class RemoteSocketFile extends AbstractSocketFile implements RemoteSocketFileInterface
 {
     /**
-     * @var SocketConnectionInterface|null
+     * @var RemoteSocketConnectionInterface|null
      */
     protected $connection;
 
     /**
      * {@inheritdoc}
      */
-    public function setConnection(SocketConnectionInterface $connection = null)
+    public function setConnection(RemoteSocketConnectionInterface $connection = null)
     {
         $this->connection = $connection;
 

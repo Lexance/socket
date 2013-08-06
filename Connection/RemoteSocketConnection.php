@@ -8,7 +8,7 @@
 
 namespace lx\Socket\Connection;
 
-class SocketConnection implements SocketConnectionInterface
+class RemoteSocketConnection implements SocketConnectionInterface
 {
     /**
      * @var string
@@ -32,8 +32,8 @@ class SocketConnection implements SocketConnectionInterface
 
     /**
      * @param string $host
-     * @param int    $port$type
-     * @param array  $type_parameters
+     * @param int    $port
+     * @param array  $parameters
      */
     public function __construct($host, $port, array $parameters = array())
     {

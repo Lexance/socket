@@ -24,7 +24,8 @@ class LocalSocketFile extends AbstractSocketFile implements LocalSocketFileInter
     }
 
     /**
-     * @param RemoteSocketFileInterface|null $file
+     * @param RemoteSocketFileInterface $remote_file
+     *
      * @return $this
      */
     public function setRemoteFile(RemoteSocketFileInterface $remote_file = null)

@@ -8,7 +8,7 @@
 
 namespace lx\Socket\Connection;
 
-interface SocketConnectionInterface
+interface RemoteSocketConnectionInterface
 {
     /**
      * @param string $host
