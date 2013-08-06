@@ -21,11 +21,6 @@ class RemoteSocketConnection implements SocketConnectionInterface
     protected $port;
 
     /**
-     * @var string
-     */
-    protected $type;
-
-    /**
      * @var array
      */
     protected $type_parameters;
