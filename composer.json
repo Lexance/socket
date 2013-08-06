@@ -13,7 +13,7 @@
         "psr-0": { "lx\\Socket": "" }
     },
     "require": {
-        "lx/http": "dev-master"
+        "lx/http": "1.0.*@dev"
     },
     "target-dir": "lx/Socket",
     "extra": {
