@@ -13,10 +13,13 @@ use lx\Socket\File\AbstractSocketFile;
 interface SocketBuilderInterface
 {
     /**
-     * @param AbstractSocketFile $file
-     * @return string
+     * @param string $file
+     * @param string $mode
+     * @param string $timeout
+     *
+     * @return mixed
      */
-    public function build($file);
+    public function build($file, $mode = AbstractSocketFile::DEFAULT_MODE, $timeout = AbstractSocket::DEFAULT_TIMEOUT);
 
     /**
      * @param string $type
