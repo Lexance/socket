@@ -10,7 +10,7 @@ namespace lx\Socket\Connection;
 
 use lx\Http\Http;
 
-class HttpConnection extends RemoteSocketConnection
+class HttpSocketConnection extends RemoteSocketConnection
 {
     /**
      * @var string

@@ -8,7 +8,7 @@
 
 namespace lx\Socket\Connection;
 
-class RemoteSocketConnection implements SocketConnectionInterface
+class RemoteSocketConnection implements RemoteSocketConnectionInterface
 {
     /**
      * @var string

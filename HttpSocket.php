@@ -8,7 +8,7 @@
 
 namespace lx\Socket;
 
-use lx\Socket\Connection\HttpConnection;
+use lx\Socket\Connection\HttpSocketConnection;
 use lx\Socket\File\AbstractSocketFile;
 use lx\Socket\File\RemoteSocketFileInterface;
 
@@ -21,10 +21,10 @@ class HttpSocket extends RemoteSocket
     {
         parent::__construct($file, $mode, $timeout);
         /** @var RemoteSocketFileInterface  $file */
-        /** @var HttpConnection $connection */
+        /** @var HttpSocketConnection $connection */
         $connection = $file->getConnection();
-        if(!($connection instanceof HttpConnection))
-            throw new \InvalidArgumentException(\sprintf('The given socket connection of file %s does not implement lx\Socket\Connection\HttpConnection.', $file));
+        if(!($connection instanceof HttpSocketConnection))
+            throw new \InvalidArgumentException(\sprintf('The given socket connection of file %s does not implement lx\Socket\Connection\HttpSocketConnection.', $file));
 
         $this->write($this->generateRequestHeader());
 
@@ -45,7 +45,7 @@ class HttpSocket extends RemoteSocket
      */
     public function generateRequestHeader()
     {
-        /** @var HttpConnection $connection */
+        /** @var HttpSocketConnection $connection */
         $connection = $this->file->getConnection();
         $parameters = $connection = $connection->getParameters();
         /** @var AbstractSocketFile $file */

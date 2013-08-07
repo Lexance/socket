@@ -8,6 +8,6 @@
 
 namespace lx\Socket\Connection;
 
-class HttpsConnection extends HttpConnection
+class HttpsSocketConnection extends HttpSocketConnection
 {
 }
