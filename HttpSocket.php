@@ -47,10 +47,10 @@ class HttpSocket extends RemoteSocket
     {
         /** @var HttpSocketConnection $connection */
         $connection = $this->file->getConnection();
-        $parameters = $connection = $connection->getParameters();
+        $parameters = $connection->getParameters();
         /** @var AbstractSocketFile $file */
         $header = \sprintf("GET %s HTTP/1.1\r\nHost: %s\r\n%sConnection: Close\r\n\r\n",
-            $file->getRealPath(),
+            $this->file->getPathname(),
             $connection->getHost(),
             ($parameters['username'] !== false ? \sprintf("Authorization: Basic %s\r\n", \base64_encode($parameters['username'] . ':' . $parameters['password'])) : '')
         );

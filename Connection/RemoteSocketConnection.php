@@ -58,6 +58,6 @@ class RemoteSocketConnection implements RemoteSocketConnectionInterface
      */
     public function getParameters()
     {
-        return $this->type_parameters;
+        return $this->parameters;
     }
 }

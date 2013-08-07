@@ -33,7 +33,7 @@ class SocketBuilder implements SocketBuilderInterface
     public function build(AbstractSocketFile $file, $mode = AbstractSocket::DEFAULT_MODE, $timeout = AbstractSocket::DEFAULT_TIMEOUT)
     {
         if(!isset($this->socket_classes[$file->getType()]))
-            throw new \LogicException(\sprintf('The file "%s" had the type "%s" but the builder had no socket class for that type. Available types are: %s', $file, $file->getType(), \implode(', '. \array_keys($this->socket_classes))));
+            throw new \LogicException(\sprintf('The file "%s" had the type "%s" but the builder had no socket class for that type. Available types are: %s', $file, $file->getType(), \implode(', ', \array_keys($this->socket_classes))));
         $class = $this->socket_classes[$file->getType()];
         return new $class($file, $mode, $timeout);
     }

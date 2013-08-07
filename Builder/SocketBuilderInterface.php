@@ -8,18 +8,19 @@
 
 namespace lx\Socket\Builder;
 
+use lx\Socket\AbstractSocket;
 use lx\Socket\File\AbstractSocketFile;
 
 interface SocketBuilderInterface
 {
     /**
-     * @param string $file
-     * @param string $mode
-     * @param string $timeout
+     * @param AbstractSocketFile $file
+     * @param string             $mode
+     * @param string             $timeout
      *
-     * @return mixed
+     * @return AbstractSocket
      */
-    public function build($file, $mode = AbstractSocketFile::DEFAULT_MODE, $timeout = AbstractSocket::DEFAULT_TIMEOUT);
+    public function build(AbstractSocketFile $file, $mode = AbstractSocket::DEFAULT_MODE, $timeout = AbstractSocket::DEFAULT_TIMEOUT);
 
     /**
      * @param string $type

@@ -119,7 +119,10 @@ abstract class AbstractSocket implements SocketInterface
      */
     protected function baseRead($data, $length)
     {
-        $this->read_size += $length;
+        if ($data === false)
+            throw new IOException(\sprintf('Failed to read file "%s".', $this->file->getPathname()));
+        // get the length of the $data (last lenght might be smaller than the fiven lenght)
+        $this->read_size += \mb_strlen($data);
         $this->meta_data = \stream_get_meta_data($this->handle);
         // if the result is a string leave metadata checks byside
         if (\is_string($data) === true)
@@ -129,8 +132,6 @@ abstract class AbstractSocket implements SocketInterface
             throw new IOException(\sprintf('Socket for file "%s" timed out.', $this->file->getPathname()));
         if ($this->meta_data['blocked'] === true)
             throw new IOException(\sprintf('Socket for file "%s" blocked.', $this->file->getPathname()));
-        if ($data === false)
-            throw new IOException(\sprintf('Failed to read file "%s".', $this->file->getPathname()));
     }
 
     /**
