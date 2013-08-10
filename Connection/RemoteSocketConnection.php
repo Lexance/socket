@@ -60,4 +60,12 @@ class RemoteSocketConnection implements RemoteSocketConnectionInterface
     {
         return $this->parameters;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+       return $this->getHost().':'.$this->getPort();
+    }
 }

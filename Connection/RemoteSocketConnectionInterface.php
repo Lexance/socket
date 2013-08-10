@@ -31,4 +31,9 @@ interface RemoteSocketConnectionInterface
      * @return array
      */
     public function getParameters();
+
+    /**
+     * @return string
+     */
+    public function __toString();
 }
